@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "608967414741",
+    "project_id": "taswaq-9e149",
+    "storage_bucket": "taswaq-9e149.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608967414741:android:96f414a3a08093c09b235c",
+        "android_client_info": {
+          "package_name": "com.example.taswaq"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608967414741-gh0jtfs94nc1bifnntj5o7vdaki7t8gl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.taswaq",
+            "certificate_hash": "7a2aa3e325202eb5430b5cbced1ad56ef6aecddd"
+          }
+        },
+        {
+          "client_id": "608967414741-f5t3fn16tvo3l6q8p2k0bqf53nh6ve4d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-LrSbF9ASomfS_1IaVJWNLR85waRypK0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "608967414741-f5t3fn16tvo3l6q8p2k0bqf53nh6ve4d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "608967414741-phi9ij20v13di1lmc3khsrkv9slvb2p9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.taswaq"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608967414741:android:61682c3ad2be49879b235c",
+        "android_client_info": {
+          "package_name": "com.example.taswaq_dashboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608967414741-f5t3fn16tvo3l6q8p2k0bqf53nh6ve4d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-LrSbF9ASomfS_1IaVJWNLR85waRypK0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "608967414741-f5t3fn16tvo3l6q8p2k0bqf53nh6ve4d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "608967414741-phi9ij20v13di1lmc3khsrkv9slvb2p9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.taswaq"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
