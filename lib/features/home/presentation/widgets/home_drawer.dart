@@ -1,5 +1,7 @@
-
 import 'package:flutter/material.dart';
+import 'package:taswaq_dashboard/core/utils/app_colors.dart';
+
+import '../../../../core/utils/app_styles.dart';
 
 class HomeDrawer extends StatelessWidget {
   const HomeDrawer({
@@ -9,20 +11,23 @@ class HomeDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      width: MediaQuery.sizeOf(context).width * 0.6,
-      backgroundColor: Colors.red,
+      width: MediaQuery.sizeOf(context).width * 0.2,
+      backgroundColor: Colors.white,
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          const DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.blue,
-            ),
-            child: Text(
-              'Menu',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
+          SizedBox(
+            height: MediaQuery.sizeOf(context).height * 0.1,
+            child: const DrawerHeader(
+              margin: EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: AppColors.primaryColor,
+              ),
+              child: FittedBox(
+                child: Text(
+                  'Menu',
+                  style: AppStyles.textStyle24B,
+                ),
               ),
             ),
           ),
@@ -30,7 +35,6 @@ class HomeDrawer extends StatelessWidget {
             leading: const Icon(Icons.home),
             title: const Text('Home'),
             onTap: () {
-              // Handle navigation to Home page
               Navigator.pop(context);
             },
           ),
@@ -38,15 +42,13 @@ class HomeDrawer extends StatelessWidget {
             leading: const Icon(Icons.settings),
             title: const Text('Settings'),
             onTap: () {
-              // Handle navigation to Settings page
               Navigator.pop(context);
             },
           ),
           ListTile(
-            leading: const Icon(Icons.contact_page),
-            title: const Text('Contact Us'),
+            leading: const Icon(Icons.privacy_tip),
+            title: const Text('Privacy Policy'),
             onTap: () {
-              // Handle navigation to Contact page
               Navigator.pop(context);
             },
           ),
