@@ -10,15 +10,19 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text(
-          'Welcome to Taswaq DashBoard',
-          style: AppStyles.textStyle16SB,
-        ),
-      ),
+      appBar: buildHomeViewAppBar(),
       drawer: const HomeDrawer(),
       body: const HomeViewBody(),
+    );
+  }
+
+  AppBar buildHomeViewAppBar() {
+    return AppBar(
+      centerTitle: true,
+      title: const Text(
+        'Welcome to Taswaq DashBoard',
+        style: AppStyles.textStyle16SB,
+      ),
     );
   }
 }
