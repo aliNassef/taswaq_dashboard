@@ -6,10 +6,13 @@ class PrivacyRemoteSource {
 
   PrivacyRemoteSource({required this.databaseService});
 
-  Future<void> addData({required Map<String, dynamic> data}) async {
+  Future<void> addData({
+    required Map<String, dynamic> data,
+  }) async {
     return await databaseService.addData(
       path: EndPoints.privacyPolicy,
       data: data,
+      docId: '1',
     );
   }
 }

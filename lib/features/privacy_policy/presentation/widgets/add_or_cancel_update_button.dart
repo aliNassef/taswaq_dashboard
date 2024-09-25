@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:taswaq_dashboard/features/privacy_policy/domain/entity/privacy_entity.dart';
 
 import '../../../../core/shared/widgets/default_app_button.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -25,8 +26,8 @@ class AddorCancelUpdates extends StatelessWidget {
             textColor: Colors.white,
           ),
           DefaultAppButton(
-            onPressed: () {
-              context.read<PrivacyCubit>().addData();
+            onPressed: () async {
+              await addData(context);
             },
             padding: 0,
             text: 'add',
@@ -36,5 +37,20 @@ class AddorCancelUpdates extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Future<void> addData(BuildContext context) async {
+    final cubit = context.read<PrivacyCubit>();
+    final PrivacyEntity data = PrivacyEntity(
+      childrenPrivacy: cubit.childrenPrivacy.text,
+      collectionInfo: cubit.collectionInfo.text,
+      dataSecurity: cubit.dataSecurity.text,
+      ourPolicy: cubit.ourPolicy.text,
+      sharingInfo: cubit.sharingInfo.text,
+      updatesPrivacy: cubit.updatesPrivacy.text,
+      useInfo: cubit.useInfo.text,
+      userRights: cubit.userRights.text,
+    );
+    await cubit.addData(data: data);
   }
 }
