@@ -9,11 +9,13 @@ class CustomTextFormField extends StatefulWidget {
     required this.controller,
     this.isPassword = false,
     this.maxLines = 1,
+    this.initialValue,
   });
   final String hintText;
   final TextEditingController controller;
   final bool isPassword;
   final int maxLines;
+  final String? initialValue;
 
   @override
   State<CustomTextFormField> createState() => _CustomTextFormFieldState();
@@ -24,6 +26,8 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      scrollPadding: EdgeInsets.zero,
+      initialValue: widget.initialValue,
       maxLines: widget.maxLines,
       obscureText: isSecure,
       validator: (value) {
@@ -67,7 +71,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                         color: AppColors.blackColor,
                       ),
               )
-            : const SizedBox(),
+            : null,
       ),
     );
   }

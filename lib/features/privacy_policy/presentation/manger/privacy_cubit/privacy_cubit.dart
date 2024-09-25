@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:taswaq_dashboard/features/privacy_policy/domain/repo/privacy_policy_repo.dart';
 
- import '../../../domain/entity/privacy_entity.dart';
+import '../../../domain/entity/privacy_entity.dart';
 
 part 'privacy_state.dart';
 
@@ -31,18 +31,6 @@ class PrivacyCubit extends Cubit<PrivacyState> {
 
   Future<void> addData({required PrivacyEntity data}) async {
     try {
-      // await privacyPolicyRepo.addData(data: {
-      //   // need to refactor to entity
-      //   ApiKey.ourPolicy: ourPolicy.text,
-      //   ApiKey.collectionInfo: collectionInfo.text,
-      //   ApiKey.useInfo: useInfo.text,
-      //   ApiKey.sharingInfo: sharingInfo.text,
-      //   ApiKey.dataSecurity: dataSecurity.text,
-      //   ApiKey.userRights: userRights.text,
-      //   ApiKey.childrenPrivacy: childrenPrivacy.text,
-      //   ApiKey.updatesPrivacy: updatesPrivacy.text,
-      // });
-
       await privacyPolicyRepo.addData(data: data.toMap());
       emit(PrivacyAddedSuccess());
     } catch (e) {
@@ -54,5 +42,24 @@ class PrivacyCubit extends Cubit<PrivacyState> {
     }
   }
 
-  
+  Future<void> getData() async {
+    emit(PrivacyGetLoading());
+    final data = await privacyPolicyRepo.getData();
+    data.fold(
+        (error) => emit(
+              PrivacyGetFailure(errMessage: error.errMessage),
+            ), (data) {
+      ourPolicy.text = data.ourPolicy ?? '';
+      collectionInfo.text = data.collectionInfo ?? '';
+      useInfo.text = data.useInfo ?? '';
+      sharingInfo.text = data.sharingInfo ?? '';
+      dataSecurity.text = data.dataSecurity ?? '';
+      userRights.text = data.userRights ?? '';
+      childrenPrivacy.text = data.childrenPrivacy ?? '';
+      updatesPrivacy.text = data.updatesPrivacy ?? '';
+      emit(
+        PrivacyGetSuccess(),
+      );
+    });
+  }
 }

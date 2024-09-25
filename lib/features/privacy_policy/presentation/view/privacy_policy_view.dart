@@ -19,7 +19,7 @@ class PrivacyPolicyView extends StatelessWidget {
       body: BlocProvider(
         create: (context) => PrivacyCubit(
           getIt<PrivacyPolicyRepo>(),
-        ),
+        )..getData(),
         child: const SafeArea(
           child: PrivacyPolicyViewBody(),
         ),

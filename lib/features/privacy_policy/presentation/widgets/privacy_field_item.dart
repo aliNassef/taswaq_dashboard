@@ -4,10 +4,13 @@ import '../../../../core/shared/widgets/custom_text_form_field.dart';
 import '../../../../core/utils/app_styles.dart';
 
 class PrivacyFieldItem extends StatelessWidget {
-  const PrivacyFieldItem(
-      {super.key, required this.title, required this.controller});
+  const PrivacyFieldItem({
+    super.key,
+    required this.title,
+    required this.controller,
+   });
   final String title;
-  final TextEditingController controller;
+   final TextEditingController controller;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -23,7 +26,7 @@ class PrivacyFieldItem extends StatelessWidget {
             vertical: MediaQuery.sizeOf(context).height * 0.02,
           ),
           child: CustomTextFormField(
-            hintText: 'content',
+             hintText: 'content',
             controller: controller,
             maxLines: 5,
           ),
