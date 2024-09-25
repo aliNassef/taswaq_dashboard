@@ -32,6 +32,7 @@ class PrivacyCubit extends Cubit<PrivacyState> {
   Future<void> addData() async {
     try {
       await privacyPolicyRepo.addData(data: {
+        // need to refactor to entity 
         ApiKey.ourPolicy: ourPolicy.text,
         ApiKey.collectionInfo: collectionInfo.text,
         ApiKey.useInfo: useInfo.text,

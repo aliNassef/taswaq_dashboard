@@ -1,9 +1,9 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
- import 'package:taswaq_dashboard/core/utils/app_styles.dart';
+import 'package:taswaq_dashboard/core/utils/app_styles.dart';
 import 'package:taswaq_dashboard/features/privacy_policy/presentation/manger/privacy_cubit/privacy_cubit.dart';
 
+import '../../../../core/shared/functions/toast_dialog.dart';
 import 'add_or_cancel_update_button.dart';
 import 'privacy_field_item.dart';
 
@@ -19,10 +19,10 @@ class PrivacyPolicyViewBody extends StatelessWidget {
       child: BlocListener<PrivacyCubit, PrivacyState>(
         listener: (context, state) {
           if (state is PrivacyAddedSuccess) {
-            log('state is PrivacyAddedSuccess');
+            showToast(text: 'Privacy policy added successfully');
           }
           if (state is PrivacyAddedFailure) {
-            log(state.errMessage);
+            showToast(text: state.errMessage);
           }
         },
         child: SingleChildScrollView(
@@ -46,6 +46,14 @@ class PrivacyPolicyViewBody extends StatelessWidget {
               PrivacyFieldItem(
                 title: 'Information Collection',
                 controller: cubit.collectionInfo,
+              ),
+              PrivacyFieldItem(
+                title: 'Information Use',
+                controller: cubit.useInfo,
+              ),
+              PrivacyFieldItem(
+                title: 'Information Sharing',
+                controller: cubit.sharingInfo,
               ),
               PrivacyFieldItem(
                 title: 'Data Security',
