@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:taswaq_dashboard/core/utils/app_colors.dart';
 
 import '../../../../core/utils/app_styles.dart';
+import '../../../privacy_policy/presentation/view/privacy_policy_view.dart';
 
 class HomeDrawer extends StatelessWidget {
   const HomeDrawer({
@@ -49,7 +50,7 @@ class HomeDrawer extends StatelessWidget {
             leading: const Icon(Icons.privacy_tip),
             title: const Text('Privacy Policy'),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.pushNamed(context, PrivacyPolicyView.routeName);
             },
           ),
         ],

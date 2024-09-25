@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class PrivacyPolicyViewBody extends StatelessWidget {
@@ -6,6 +5,10 @@ class PrivacyPolicyViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Column(
+      children: [
+       
+      ],
+    );
   }
 }

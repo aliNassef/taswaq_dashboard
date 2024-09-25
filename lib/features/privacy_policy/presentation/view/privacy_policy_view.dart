@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/privacy_policy_vview_body.dart';
+import '../widgets/privacy_policy_view_body.dart';
 
 class PrivacyPolicyView extends StatelessWidget {
   const PrivacyPolicyView({super.key});
