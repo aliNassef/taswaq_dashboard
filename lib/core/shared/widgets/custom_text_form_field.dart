@@ -8,10 +8,12 @@ class CustomTextFormField extends StatefulWidget {
     required this.hintText,
     required this.controller,
     this.isPassword = false,
+    this.maxLines = 1,
   });
   final String hintText;
   final TextEditingController controller;
   final bool isPassword;
+  final int maxLines;
 
   @override
   State<CustomTextFormField> createState() => _CustomTextFormFieldState();
@@ -22,6 +24,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      maxLines: widget.maxLines,
       obscureText: isSecure,
       validator: (value) {
         if (value == null || value.isEmpty) {

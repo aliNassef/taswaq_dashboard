@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:taswaq_dashboard/core/utils/app_colors.dart';
+import 'package:taswaq_dashboard/features/home/presentation/view/home_view.dart';
 
-import '../../../../core/utils/app_styles.dart';
-import '../../../privacy_policy/presentation/view/privacy_policy_view.dart';
+import '../../utils/app_styles.dart';
+import '../../../features/privacy_policy/presentation/view/privacy_policy_view.dart';
 
-class HomeDrawer extends StatelessWidget {
-  const HomeDrawer({
+class LayoutDrawer extends StatelessWidget {
+  const LayoutDrawer({
     super.key,
   });
 
@@ -36,7 +37,7 @@ class HomeDrawer extends StatelessWidget {
             leading: const Icon(Icons.home),
             title: const Text('Home'),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.pushNamed(context, HomeView.routeName);
             },
           ),
           ListTile(

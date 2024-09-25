@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/app_styles.dart';
-import '../widgets/home_drawer.dart';
+import '../../../../core/shared/widgets/layout_drawer.dart';
 import '../widgets/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
@@ -11,7 +11,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildHomeViewAppBar(),
-      drawer: const HomeDrawer(),
+      drawer: const LayoutDrawer(),
       body: const HomeViewBody(),
     );
   }
