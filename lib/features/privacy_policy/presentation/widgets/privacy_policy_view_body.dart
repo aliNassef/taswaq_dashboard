@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:taswaq_dashboard/core/utils/app_styles.dart';
-import 'package:taswaq_dashboard/features/privacy_policy/presentation/manger/privacy_cubit/privacy_cubit.dart';
+import '../../../../core/utils/app_styles.dart';
+import '../manger/privacy_cubit/privacy_cubit.dart';
 import '../../../../core/shared/functions/toast_dialog.dart';
 import 'add_or_cancel_update_button.dart';
 import 'privacy_field_item.dart';

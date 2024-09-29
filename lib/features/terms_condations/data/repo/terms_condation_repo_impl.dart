@@ -1,8 +1,8 @@
 import 'dart:developer';
 
 import 'package:dartz/dartz.dart';
-import 'package:taswaq_dashboard/features/terms_condations/data/source/terms_remote_source.dart';
-import 'package:taswaq_dashboard/features/terms_condations/domain/entity/terms_entity.dart';
+import '../source/terms_remote_source.dart';
+import '../../domain/entity/terms_entity.dart';
 
 import '../../../../core/errors/exceptions.dart';
 import '../../../../core/errors/failure.dart';

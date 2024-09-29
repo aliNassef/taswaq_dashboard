@@ -1,4 +1,4 @@
-import 'package:taswaq_dashboard/features/terms_condations/data/model/terms_model.dart';
+import '../model/terms_model.dart';
 
 import '../../../../core/services/database_service.dart';
 import '../../../../core/services/end_ponits.dart';

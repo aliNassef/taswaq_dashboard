@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:taswaq_dashboard/features/terms_condations/domain/repo/terms_condation_repo.dart';
+import '../../../domain/repo/terms_condation_repo.dart';
 
 import '../../../../../core/services/end_ponits.dart';
 import 'terms_condation_state.dart';

@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:taswaq_dashboard/core/errors/exceptions.dart';
-import 'package:taswaq_dashboard/core/errors/failure.dart';
-import 'package:taswaq_dashboard/features/privacy_policy/domain/entity/privacy_entity.dart';
+import '../../../../core/errors/exceptions.dart';
+import '../../../../core/errors/failure.dart';
+import '../../domain/entity/privacy_entity.dart';
 
 import '../../domain/repo/privacy_policy_repo.dart';
 import '../source/privacy_remote_source.dart';

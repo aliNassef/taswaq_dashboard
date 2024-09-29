@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:taswaq_dashboard/core/dI/dependency_injuction.dart';
-import 'package:taswaq_dashboard/features/privacy_policy/domain/repo/privacy_policy_repo.dart';
-import 'package:taswaq_dashboard/features/privacy_policy/presentation/manger/privacy_cubit/privacy_cubit.dart';
+import '../../../../core/dI/dependency_injuction.dart';
+import '../../domain/repo/privacy_policy_repo.dart';
+import '../manger/privacy_cubit/privacy_cubit.dart';
 
 import '../../../../core/shared/widgets/layout_drawer.dart';
 import '../../../../core/utils/app_styles.dart';

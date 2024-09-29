@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:taswaq_dashboard/core/utils/app_colors.dart';
-import 'package:taswaq_dashboard/core/utils/app_images.dart';
-import 'package:taswaq_dashboard/features/home/presentation/view/home_view.dart';
-import 'package:taswaq_dashboard/features/terms_condations/presentation/view/terms_condation_view.dart';
+import '../../utils/app_colors.dart';
+import '../../utils/app_images.dart';
+import '../../../features/home/presentation/view/home_view.dart';
+import '../../../features/terms_condations/presentation/view/terms_condation_view.dart';
 
 import '../../utils/app_styles.dart';
 import '../../../features/privacy_policy/presentation/view/privacy_policy_view.dart';

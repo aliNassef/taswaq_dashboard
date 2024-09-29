@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:taswaq_dashboard/features/terms_condations/presentation/manger/terms_conndation_cubit/terms_condation_cubit.dart';
+import '../manger/terms_conndation_cubit/terms_condation_cubit.dart';
 
 import '../../../../core/dI/dependency_injuction.dart';
 import '../../../../core/utils/app_styles.dart';

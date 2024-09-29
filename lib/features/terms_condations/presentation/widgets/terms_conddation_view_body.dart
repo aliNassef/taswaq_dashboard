@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:taswaq_dashboard/core/shared/functions/toast_dialog.dart';
-import 'package:taswaq_dashboard/core/shared/widgets/default_app_button.dart';
-import 'package:taswaq_dashboard/core/utils/app_colors.dart';
-import 'package:taswaq_dashboard/features/terms_condations/presentation/widgets/terms_condation_field_item.dart';
+import '../../../../core/shared/functions/toast_dialog.dart';
+import '../../../../core/shared/widgets/default_app_button.dart';
+import '../../../../core/utils/app_colors.dart';
+import 'terms_condation_field_item.dart';
 
 import '../../../../core/utils/app_styles.dart';
 import '../manger/terms_conndation_cubit/terms_condation_cubit.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taswaq_dashboard/features/home/presentation/view/home_view.dart';
+import '../../features/home/presentation/view/home_view.dart';
 
 import '../../features/privacy_policy/presentation/view/privacy_policy_view.dart';
 import '../../features/terms_condations/presentation/view/terms_condation_view.dart';

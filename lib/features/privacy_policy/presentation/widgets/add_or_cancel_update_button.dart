@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:taswaq_dashboard/features/privacy_policy/domain/entity/privacy_entity.dart';
+import '../../domain/entity/privacy_entity.dart';
 
 import '../../../../core/shared/widgets/default_app_button.dart';
 import '../../../../core/utils/app_colors.dart';

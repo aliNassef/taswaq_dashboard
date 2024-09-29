@@ -1,8 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:taswaq_dashboard/core/dI/dependency_injuction.dart';
-import 'package:taswaq_dashboard/taswaq_dashboard.dart';
+import 'core/dI/dependency_injuction.dart';
+import 'taswaq_dashboard.dart';
 import 'core/shared/widgets/custom_bloc_observer.dart';
 import 'firebase_options.dart';
 

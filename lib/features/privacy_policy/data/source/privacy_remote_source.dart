@@ -1,6 +1,6 @@
-import 'package:taswaq_dashboard/core/services/database_service.dart';
-import 'package:taswaq_dashboard/core/services/end_ponits.dart';
-import 'package:taswaq_dashboard/features/privacy_policy/data/data/privacy_model.dart';
+import '../../../../core/services/database_service.dart';
+import '../../../../core/services/end_ponits.dart';
+import '../data/privacy_model.dart';
 
 class PrivacyRemoteSource {
   final DatabaseService databaseService;

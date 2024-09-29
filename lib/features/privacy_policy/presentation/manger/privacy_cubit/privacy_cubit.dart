@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
-import 'package:taswaq_dashboard/features/privacy_policy/domain/repo/privacy_policy_repo.dart';
+import '../../../domain/repo/privacy_policy_repo.dart';
 
 import '../../../domain/entity/privacy_entity.dart';
 
