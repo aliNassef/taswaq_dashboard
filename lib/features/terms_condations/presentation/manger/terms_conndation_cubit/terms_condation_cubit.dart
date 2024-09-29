@@ -34,18 +34,22 @@ class TermsCondationCubit extends Cubit<TermsCondationState> {
   }
 
   void updateTermsCondation() async {
-    _termsCondationRepo.addData(data: {
-      ApiKey.terms1: terms1.text,
-      ApiKey.terms2: terms2.text,
-      ApiKey.terms3: terms3.text,
-      ApiKey.terms4: terms4.text,
-      ApiKey.terms5: terms5.text,
-      ApiKey.terms6: terms6.text,
-      ApiKey.terms7: terms7.text,
-      ApiKey.terms8: terms8.text,
-      ApiKey.terms9: terms9.text,
-      ApiKey.terms10: terms10.text,
-    });
-    emit(TermsCondationUpdateDataSuccess());
+    try {
+  await _termsCondationRepo.addData(data: {
+    ApiKey.terms1: terms1.text,
+    ApiKey.terms2: terms2.text,
+    ApiKey.terms3: terms3.text,
+    ApiKey.terms4: terms4.text,
+    ApiKey.terms5: terms5.text,
+    ApiKey.terms6: terms6.text,
+    ApiKey.terms7: terms7.text,
+    ApiKey.terms8: terms8.text,
+    ApiKey.terms9: terms9.text,
+    ApiKey.terms10: terms10.text,
+  });
+  emit(TermsCondationUpdateDataSuccess());
+}  catch (e) {
+  emit(TermsCondationUpdateDataFailure(errMessage: e.toString()));
+}
   }
 }

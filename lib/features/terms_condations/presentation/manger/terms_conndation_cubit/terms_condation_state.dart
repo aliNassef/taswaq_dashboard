@@ -17,4 +17,11 @@ final class TermsCondationGetDataFailure extends TermsCondationState {
 
   TermsCondationGetDataFailure({required this.errMessage});
 }
+
 final class TermsCondationUpdateDataSuccess extends TermsCondationState {}
+
+final class TermsCondationUpdateDataFailure extends TermsCondationState {
+  final String errMessage;
+
+  TermsCondationUpdateDataFailure({required this.errMessage});
+}
