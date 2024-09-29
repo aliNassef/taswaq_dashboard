@@ -17,7 +17,7 @@ class TermsCondationView extends StatelessWidget {
       body: BlocProvider(
         create: (context) => TermsCondationCubit(
           getIt<TermsCondationRepo>(),
-        ),
+        )..getTermsCondation(),
         child: const SafeArea(
           child: TermsCondationViewBody(),
         ),

@@ -16,6 +16,13 @@ class TermsCondationViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     final cubit = context.read<TermsCondationCubit>();
     return BlocConsumer<TermsCondationCubit, TermsCondationState>(
+      listenWhen: (previous, current) =>
+          current is TermsCondationUpdateDataSuccess ||
+          current is TermsCondationUpdateDataFailure,
+      buildWhen: (previous, current) =>
+          current is TermsCondationGetDataSuccess ||
+          current is TermsCondationGetDataFailure ||
+          current is TermsCondationGetDataLoading,
       listener: (context, state) {
         if (state is TermsCondationUpdateDataSuccess) {
           showToast(text: 'Terms and Conditions updated successfully');
@@ -25,6 +32,15 @@ class TermsCondationViewBody extends StatelessWidget {
         }
       },
       builder: (context, state) {
+        if (state is TermsCondationGetDataLoading) {
+          return const Center(child: CircularProgressIndicator());
+        }
+        if (state is TermsCondationGetDataFailure) {
+          return Center(
+            child: Text(state.errMessage),
+          );
+        }
+
         return Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: 16,

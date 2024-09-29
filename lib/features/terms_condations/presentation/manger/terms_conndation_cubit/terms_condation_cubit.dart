@@ -24,32 +24,42 @@ class TermsCondationCubit extends Cubit<TermsCondationState> {
     emit(TermsCondationGetDataLoading());
     final data = await _termsCondationRepo.getData();
     data.fold(
-      (error) => emit(
-        TermsCondationGetDataFailure(errMessage: error.errMessage),
-      ),
-      (data) => emit(
+        (error) => emit(
+              TermsCondationGetDataFailure(errMessage: error.errMessage),
+            ), (data) {
+      terms1.text = data.terms1;
+      terms2.text = data.terms2;
+      terms3.text = data.terms3;
+      terms4.text = data.terms4;
+      terms5.text = data.terms5;
+      terms6.text = data.terms6;
+      terms7.text = data.terms7;
+      terms8.text = data.terms8;
+      terms9.text = data.terms9;
+      terms10.text = data.terms10;
+      emit(
         TermsCondationGetDataSuccess(entity: data),
-      ),
-    );
+      );
+    });
   }
 
   void updateTermsCondation() async {
     try {
-  await _termsCondationRepo.addData(data: {
-    ApiKey.terms1: terms1.text,
-    ApiKey.terms2: terms2.text,
-    ApiKey.terms3: terms3.text,
-    ApiKey.terms4: terms4.text,
-    ApiKey.terms5: terms5.text,
-    ApiKey.terms6: terms6.text,
-    ApiKey.terms7: terms7.text,
-    ApiKey.terms8: terms8.text,
-    ApiKey.terms9: terms9.text,
-    ApiKey.terms10: terms10.text,
-  });
-  emit(TermsCondationUpdateDataSuccess());
-}  catch (e) {
-  emit(TermsCondationUpdateDataFailure(errMessage: e.toString()));
-}
+      await _termsCondationRepo.addData(data: {
+        ApiKey.terms1: terms1.text,
+        ApiKey.terms2: terms2.text,
+        ApiKey.terms3: terms3.text,
+        ApiKey.terms4: terms4.text,
+        ApiKey.terms5: terms5.text,
+        ApiKey.terms6: terms6.text,
+        ApiKey.terms7: terms7.text,
+        ApiKey.terms8: terms8.text,
+        ApiKey.terms9: terms9.text,
+        ApiKey.terms10: terms10.text,
+      });
+      emit(TermsCondationUpdateDataSuccess());
+    } catch (e) {
+      emit(TermsCondationUpdateDataFailure(errMessage: e.toString()));
+    }
   }
 }
