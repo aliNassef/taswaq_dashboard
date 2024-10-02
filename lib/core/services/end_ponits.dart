@@ -1,9 +1,13 @@
 class EndPoints {
   static const String privacyPolicy = 'privacy-policy';
   static const String termsCondations = 'terms & condations';
+  static const String fqs = 'fqs';
 }
 
 class ApiKey {
+  static const String id = 'id';
+  static const String question = 'question';
+  static const String answer = 'answer';
   static const ourPolicy = 'OurPolicy';
   static const collectionInfo = 'CollectionInfo';
   static const useInfo = 'UseInfo';

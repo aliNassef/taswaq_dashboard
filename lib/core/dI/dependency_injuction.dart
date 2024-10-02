@@ -1,4 +1,7 @@
 import 'package:get_it/get_it.dart';
+import 'package:taswaq_dashboard/features/fqs/data/repo/fqs_repo_impl.dart';
+import 'package:taswaq_dashboard/features/fqs/data/source/fqs_remote_source.dart';
+import 'package:taswaq_dashboard/features/fqs/domain/repo/fqs_repo.dart';
 import '../services/database_service.dart';
 import '../services/firestore_database.dart';
 import '../../features/privacy_policy/domain/repo/privacy_policy_repo.dart';
@@ -36,6 +39,18 @@ setUpGetIt() async {
   getIt.registerSingleton<TermsCondationRepo>(
     TermsCondationRepoImpl(
       api: getIt<TermsRemoteSource>(),
+    ),
+  );
+
+  getIt.registerSingleton<FqsRemoteSource>(
+    FqsRemoteSource(
+      databaseService: getIt<DatabaseService>(),
+    ),
+  );
+
+  getIt.registerSingleton<FqsRepo>(
+    FqsRepoImpl(
+      api: getIt<FqsRemoteSource>(),
     ),
   );
 }
