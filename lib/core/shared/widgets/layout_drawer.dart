@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:taswaq_dashboard/features/fqs/presentation/view/fqs_view.dart';
 import '../../utils/app_colors.dart';
 import '../../utils/app_images.dart';
 import '../../../features/home/presentation/view/home_view.dart';
 import '../../../features/terms_condations/presentation/view/terms_condation_view.dart';
-
 import '../../utils/app_styles.dart';
 import '../../../features/privacy_policy/presentation/view/privacy_policy_view.dart';
 
@@ -51,7 +51,8 @@ class LayoutDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Icon(Icons.privacy_tip),
+            leading:
+                RepaintBoundary(child: SvgPicture.asset(AppSvgs.privacyPolicy)),
             title: const Text('Privacy Policy'),
             onTap: () {
               Navigator.pushNamed(context, PrivacyPolicyView.routeName);
@@ -64,6 +65,15 @@ class LayoutDrawer extends StatelessWidget {
             title: const Text('Terms & Conditions'),
             onTap: () {
               Navigator.pushNamed(context, TermsCondationView.routeName);
+            },
+          ),
+          ListTile(
+            leading: RepaintBoundary(
+              child: SvgPicture.asset(AppSvgs.fqs),
+            ),
+            title: const Text('Fqs'),
+            onTap: () {
+              Navigator.pushNamed(context, FqsView.routeName);
             },
           ),
         ],

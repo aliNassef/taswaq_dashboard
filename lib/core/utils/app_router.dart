@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../features/fqs/presentation/view/fqs_view.dart';
 import '../../features/home/presentation/view/home_view.dart';
 
 import '../../features/privacy_policy/presentation/view/privacy_policy_view.dart';
@@ -17,6 +18,10 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
     case TermsCondationView.routeName:
       return MaterialPageRoute(
         builder: (context) => const TermsCondationView(),
+      );
+    case FqsView.routeName:
+      return MaterialPageRoute(
+        builder: (context) => const FqsView(),
       );
 
     default:
