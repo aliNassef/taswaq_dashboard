@@ -2,6 +2,8 @@ class EndPoints {
   static const String privacyPolicy = 'privacy-policy';
   static const String termsCondations = 'terms & condations';
   static const String fqs = 'fqs';
+  static const String users = 'users';
+  static const String orders = 'orders';
 }
 
 class ApiKey {
@@ -26,4 +28,20 @@ class ApiKey {
   static const String terms8 = 'terms8';
   static const String terms9 = 'terms9';
   static const String terms10 = 'terms10';
+  static const String name = 'name';
+  static const String street = 'street';
+  static const String phoneNumber = 'phoneNumber';
+  static const String city = 'city';
+  static const String postalCode = 'postalCode';
+  static const String title = 'title';
+  static const String password = 'password';
+  static const String image = 'image';
+  static const String price = 'price';
+  static const String quantity = 'quantity';
+  static const String discountPercentage = 'discountPercentage';
+  static const String address = 'address';
+  static const String orders = 'orders';
+  static const String isRecived = 'isRecived';
+  static const String total = 'total';
+  static const String products = 'products';
 }

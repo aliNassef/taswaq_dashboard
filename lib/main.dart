@@ -15,3 +15,4 @@ void main() async {
   await setUpGetIt();
   runApp(const TaswaqDashBoard());
 }
+  

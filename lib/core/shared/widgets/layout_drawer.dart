@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:taswaq_dashboard/features/fqs/presentation/view/fqs_view.dart';
+import '../../../features/orders/presentation/view/order_view.dart';
 import '../../utils/app_colors.dart';
 import '../../utils/app_images.dart';
 import '../../../features/home/presentation/view/home_view.dart';
@@ -74,6 +75,15 @@ class LayoutDrawer extends StatelessWidget {
             title: const Text('Fqs'),
             onTap: () {
               Navigator.pushNamed(context, FqsView.routeName);
+            },
+          ),
+          ListTile(
+            leading: RepaintBoundary(
+              child: SvgPicture.asset(AppSvgs.orders),
+            ),
+            title: const Text('Orders'),
+            onTap: () {
+              Navigator.pushNamed(context, OrderView.routeName);
             },
           ),
         ],

@@ -44,7 +44,7 @@ abstract class DatabaseService {
   Future<List<Map<String, dynamic>>> getSubCollectionData({
     required String path,
     required String subCollectionName,
-    required String docId,
+    String? docId,
   });
 
   Future<bool> isProductExist({

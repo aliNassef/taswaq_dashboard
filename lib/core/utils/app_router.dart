@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../features/fqs/presentation/view/fqs_view.dart';
 import '../../features/home/presentation/view/home_view.dart';
 
+import '../../features/orders/presentation/view/order_view.dart';
 import '../../features/privacy_policy/presentation/view/privacy_policy_view.dart';
 import '../../features/terms_condations/presentation/view/terms_condation_view.dart';
 
@@ -22,6 +23,10 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
     case FqsView.routeName:
       return MaterialPageRoute(
         builder: (context) => const FqsView(),
+      );
+ case OrderView.routeName:
+      return MaterialPageRoute(
+        builder: (context) => const OrderView(),
       );
 
     default:

@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'database_service.dart';
 
- 
 class FirestoreDatabase implements DatabaseService {
   FirebaseFirestore firestore = FirebaseFirestore.instance;
 
@@ -98,8 +97,12 @@ class FirestoreDatabase implements DatabaseService {
   Future<List<Map<String, dynamic>>> getSubCollectionData({
     required String path,
     required String subCollectionName,
-    required String docId,
+    String? docId,
   }) async {
+    if (docId == null) {
+      var data = await firestore.collectionGroup(subCollectionName).get();
+      return data.docs.map((doc) => doc.data()).toList();
+    }
     var data = await firestore
         .collection(path)
         .doc(docId)
