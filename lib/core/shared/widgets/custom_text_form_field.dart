@@ -6,19 +6,19 @@ class CustomTextFormField extends StatefulWidget {
   const CustomTextFormField({
     super.key,
     required this.hintText,
-    required this.controller,
+    this.controller,
     this.isPassword = false,
     this.maxLines = 1,
     this.initialValue,
-    this.label,
+    this.label, this.onSaved,
   });
   final String hintText;
-  final TextEditingController controller;
+  final TextEditingController? controller;
   final bool isPassword;
   final int maxLines;
   final String? initialValue;
   final Widget? label;
-
+  final void Function(String?)? onSaved;
   @override
   State<CustomTextFormField> createState() => _CustomTextFormFieldState();
 }
@@ -28,6 +28,8 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onChanged: widget.onSaved,
+      onSaved: widget.onSaved,
       scrollPadding: EdgeInsets.zero,
       initialValue: widget.initialValue,
       maxLines: widget.maxLines,

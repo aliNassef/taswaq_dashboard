@@ -1,9 +1,13 @@
 import 'package:get_it/get_it.dart';
+import 'package:taswaq_dashboard/core/services/firebase_auth_service.dart';
 import 'package:taswaq_dashboard/features/fqs/data/repo/fqs_repo_impl.dart';
 import 'package:taswaq_dashboard/features/fqs/data/source/fqs_remote_source.dart';
 import 'package:taswaq_dashboard/features/fqs/domain/repo/fqs_repo.dart';
+import 'package:taswaq_dashboard/features/login/data/source/login_remote_source.dart';
+import 'package:taswaq_dashboard/features/login/domain/repo/login_repo.dart';
 import 'package:taswaq_dashboard/features/orders/data/source/order_remote_source.dart';
 import 'package:taswaq_dashboard/features/orders/domain/repo/order_repo.dart';
+import '../../features/login/data/repo/login_repo_impl.dart';
 import '../../features/orders/data/repo/order_repo_impl.dart';
 import '../services/database_service.dart';
 import '../services/firestore_database.dart';
@@ -21,7 +25,19 @@ setUpGetIt() async {
   getIt.registerSingleton<DatabaseService>(
     FirestoreDatabase(),
   );
-
+  getIt.registerSingleton<FirebaseAuthService>(
+    FirebaseAuthService(),
+  );
+  getIt.registerSingleton<LoginRemoteSource>(
+    LoginRemoteSource(
+      firebaseAuthService: getIt<FirebaseAuthService>(),
+    ),
+  );
+  getIt.registerSingleton<LoginRepo>(
+    LoginRepoImpl(
+      loginRemoteSource: getIt<LoginRemoteSource>(),
+    ),
+  );
   getIt.registerSingleton<PrivacyRemoteSource>(
     PrivacyRemoteSource(
       databaseService: getIt<DatabaseService>(),

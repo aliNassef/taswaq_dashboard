@@ -1,14 +1,18 @@
-import '../../utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-void showToast({required String text}) {
+import '../../utils/app_colors.dart';
+
+void showToast(
+    {required String text,
+    Color backgroundColor = AppColors.primaryColor,
+    Color textColor = Colors.white}) {
   Fluttertoast.showToast(
     msg: text,
     toastLength: Toast.LENGTH_SHORT,
-    gravity: ToastGravity.BOTTOM,
-    backgroundColor: AppColors.primaryColor,
-    textColor: Colors.white,
+    gravity: ToastGravity.CENTER,
+    backgroundColor: backgroundColor,
+    textColor: textColor,
     fontSize: 12,
   );
 }

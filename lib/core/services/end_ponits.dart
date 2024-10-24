@@ -44,4 +44,5 @@ class ApiKey {
   static const String isRecived = 'isRecived';
   static const String total = 'total';
   static const String products = 'products';
+  static const String email = 'email';
 }
