@@ -66,6 +66,7 @@ class LoginBloc extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: CustomTextFormField(
+                isPassword: true,
                 label: const Text(
                   'Password',
                   style: AppStyles.textStyle14M,
