@@ -10,12 +10,14 @@ class CustomTextFormField extends StatefulWidget {
     this.isPassword = false,
     this.maxLines = 1,
     this.initialValue,
+    this.label,
   });
   final String hintText;
   final TextEditingController controller;
   final bool isPassword;
   final int maxLines;
   final String? initialValue;
+  final Widget? label;
 
   @override
   State<CustomTextFormField> createState() => _CustomTextFormFieldState();
@@ -38,9 +40,12 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       },
       controller: widget.controller,
       decoration: InputDecoration(
+        floatingLabelBehavior: FloatingLabelBehavior.always,
+        label: widget.label,
+        alignLabelWithHint: true,
         contentPadding: const EdgeInsets.symmetric(
           horizontal: 16,
-          vertical: 22.5,
+          vertical: 8,
         ),
         hintText: widget.hintText,
         hintStyle: AppStyles.textStyle12R.copyWith(

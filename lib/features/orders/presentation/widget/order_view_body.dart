@@ -9,7 +9,7 @@ class OrderViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<OrderCubit, OrderState>(
       builder: (context, state) {
-        if (state is OrderSuccess) {
+        if (state is OrderSuccess) { 
           return ListView.builder(
             itemCount: state.orders.length,
             itemBuilder: (context, index) {
