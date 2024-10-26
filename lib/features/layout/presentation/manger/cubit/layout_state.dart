@@ -9,3 +9,5 @@ final class ChangelayoutStateSuccess extends LayoutState {
 }
 
 final class ChangelayoutStateFailure extends LayoutState {}
+
+final class LayoutStateLogOutSuccess extends LayoutState {}

@@ -1,4 +1,6 @@
 import 'package:get_it/get_it.dart';
+import 'package:taswaq_dashboard/features/layout/data/layout_repo_impl.dart';
+import 'package:taswaq_dashboard/features/layout/domain/repo/layout_repo.dart';
 import '../services/firebase_auth_service.dart';
 import '../../features/fqs/data/repo/fqs_repo_impl.dart';
 import '../../features/fqs/data/source/fqs_remote_source.dart';
@@ -81,6 +83,11 @@ setUpGetIt() async {
   getIt.registerSingleton<OrderRepo>(
     OrderRepoImpl(
       orderRemoteSource: getIt<OrderRemoteSource>(),
+    ),
+  );
+  getIt.registerSingleton<LayoutRepo>(
+    LayoutRepoImpl(
+      firebaseAuthService: getIt<FirebaseAuthService>(),
     ),
   );
 }

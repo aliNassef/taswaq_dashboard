@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:taswaq_dashboard/core/dI/dependency_injuction.dart';
+import 'package:taswaq_dashboard/features/layout/domain/repo/layout_repo.dart';
+import 'package:taswaq_dashboard/features/login/presentation/views/login_view.dart';
 import '../../../../core/shared/widgets/app_logo.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_images.dart';
@@ -23,7 +26,7 @@ class LayoutView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: BlocProvider(
-        create: (context) => LayoutCubit(),
+        create: (context) => LayoutCubit(getIt<LayoutRepo>()),
         child: Builder(builder: (context) {
           return BlocBuilder<LayoutCubit, LayoutState>(
             buildWhen: (previous, current) =>
@@ -117,9 +120,19 @@ class LayoutView extends StatelessWidget {
                         const SizedBox(
                           height: 30,
                         ),
-                        TextButton(
-                          onPressed: () {},
-                          child: const Text('Logout'),
+                        BlocListener<LayoutCubit, LayoutState>(
+                          listener: (context, state) {
+                            if (state is LayoutStateLogOutSuccess) {
+                              Navigator.pushReplacementNamed(
+                                  context, LoginView.routeName);
+                            }
+                          },
+                          child: TextButton(
+                            onPressed: () {
+                              cubit.logout();
+                            },
+                            child: const Text('Logout'),
+                          ),
                         ),
                       ],
                     ),
