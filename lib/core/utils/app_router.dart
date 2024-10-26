@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../features/fqs/presentation/view/fqs_view.dart';
 import '../../features/home/presentation/view/home_view.dart';
 
+import '../../features/layout/presentation/view/layout_view.dart';
 import '../../features/login/presentation/views/login_view.dart';
 import '../../features/orders/presentation/view/order_view.dart';
 import '../../features/privacy_policy/presentation/view/privacy_policy_view.dart';
@@ -32,6 +33,10 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
     case LoginView.routeName:
       return MaterialPageRoute(
         builder: (context) => const LoginView(),
+      );
+    case LayoutView.routeName:
+      return MaterialPageRoute(
+        builder: (context) => const LayoutView(),
       );
 
     default:

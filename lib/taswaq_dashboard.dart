@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:taswaq_dashboard/features/home/presentation/view/home_view.dart';
+import 'package:taswaq_dashboard/features/layout/presentation/view/layout_view.dart';
 import 'core/utils/app_colors.dart';
 import 'core/utils/app_router.dart';
 
@@ -12,7 +12,7 @@ class TaswaqDashBoard extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       onGenerateRoute: onGenerateRoute,
-      initialRoute: HomeView.routeName,
+      initialRoute: LayoutView.routeName,
       theme: ThemeData(
         useMaterial3: true,
         appBarTheme: const AppBarTheme(

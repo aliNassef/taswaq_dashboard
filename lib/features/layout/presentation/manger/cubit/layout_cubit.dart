@@ -8,7 +8,9 @@ class LayoutCubit extends Cubit<LayoutState> {
   void changePage(int index) {
     currentIndex = index;
     emit(
-      ChangelayoutStateSuccess(),
+      ChangelayoutStateSuccess(
+        index: currentIndex,
+      ),
     );
   }
 }
