@@ -9,7 +9,7 @@ class OrderViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<OrderCubit, OrderState>(
       builder: (context, state) {
-        if (state is OrderSuccess) { 
+        if (state is OrderSuccess) {
           return ListView.builder(
             itemCount: state.orders.length,
             itemBuilder: (context, index) {
@@ -21,7 +21,7 @@ class OrderViewBody extends StatelessWidget {
             },
           );
         }
-        return const Placeholder();
+        return const Center(child: CircularProgressIndicator.adaptive());
       },
     );
   }

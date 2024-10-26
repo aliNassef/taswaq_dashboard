@@ -8,11 +8,11 @@ import '../widget/order_view_body.dart';
 
 class OrderView extends StatelessWidget {
   const OrderView({super.key});
-static const routeName = '/orders';
+  static const routeName = '/orders';
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: BlocProvider(
+    return Expanded(
+      child: BlocProvider(
         create: (context) => OrderCubit(
           getIt<OrderRepo>(),
         )..getOrders(),

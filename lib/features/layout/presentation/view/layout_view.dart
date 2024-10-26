@@ -128,7 +128,7 @@ class LayoutView extends StatelessWidget {
                     color: AppColors.primaryColor,
                     thickness: 1,
                   ),
-                  Expanded(child: layoutBody(cubit.currentIndex)),
+                  layoutBody(cubit.currentIndex),
                 ],
               );
             },

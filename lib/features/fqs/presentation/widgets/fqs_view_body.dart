@@ -57,20 +57,24 @@ class FqsViewBody extends StatelessWidget {
           SizedBox(
             height: MediaQuery.sizeOf(context).height * 0.1,
           ),
-          DefaultAppButton(
-            onPressed: () {
-              final entity = FqsEntity(
-                answer: cubit.answerController.text,
-                question: cubit.questionController.text,
-                id: '${DateTime.now().millisecondsSinceEpoch}',
-              );
-              cubit.addFqs(
-                data: entity,
-              );
-            },
-            text: 'ADD',
-            backgroundColor: AppColors.blackColor,
-            textColor: Colors.white,
+          Align(
+            alignment: Alignment.bottomRight,
+            child: DefaultAppButton(
+              padding: MediaQuery.sizeOf(context).height * 4 / 6,
+              onPressed: () {
+                final entity = FqsEntity(
+                  answer: cubit.answerController.text,
+                  question: cubit.questionController.text,
+                  id: '${DateTime.now().millisecondsSinceEpoch}',
+                );
+                cubit.addFqs(
+                  data: entity,
+                );
+              },
+              text: 'ADD',
+              backgroundColor: AppColors.blackColor,
+              textColor: Colors.white,
+            ),
           )
         ],
       ),
