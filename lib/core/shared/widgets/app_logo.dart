@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/app_colors.dart';
-import '../../../../core/utils/app_styles.dart';
+import '../../utils/app_colors.dart';
+import '../../utils/app_styles.dart';
 
-class LoginBlocTitle extends StatelessWidget {
-  const LoginBlocTitle({
+class AppLogo extends StatelessWidget {
+  const AppLogo({
     super.key,
   });
 

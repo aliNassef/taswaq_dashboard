@@ -8,7 +8,7 @@ import 'package:taswaq_dashboard/core/shared/widgets/default_app_button.dart';
 import 'package:taswaq_dashboard/core/utils/app_colors.dart';
 import 'package:taswaq_dashboard/core/utils/app_styles.dart';
 import 'package:taswaq_dashboard/features/home/presentation/view/home_view.dart';
-import 'package:taswaq_dashboard/features/login/presentation/widgets/login_bloc_title.dart';
+import 'package:taswaq_dashboard/core/shared/widgets/app_logo.dart';
 
 import '../manger/cubit/login_cubit.dart';
 
@@ -26,7 +26,7 @@ class _LoginBlocState extends State<LoginBloc> {
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
-    return BlocListener<LoginCubit, LoginState>(
+    return BlocConsumer<LoginCubit, LoginState>(
       listener: (context, state) {
         if (state is LoginSuccess) {
           Navigator.pushReplacementNamed(
@@ -41,7 +41,7 @@ class _LoginBlocState extends State<LoginBloc> {
           );
         }
       },
-      child: Center(
+      builder: (_, state) => Center(
         child: Container(
           padding: const EdgeInsets.all(20),
           alignment: Alignment.center,
@@ -59,7 +59,7 @@ class _LoginBlocState extends State<LoginBloc> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  const LoginBlocTitle(),
+                  const AppLogo(),
                   SizedBox(
                     height: MediaQuery.sizeOf(context).height * 0.05,
                   ),
@@ -116,6 +116,7 @@ class _LoginBlocState extends State<LoginBloc> {
                     height: MediaQuery.sizeOf(context).height * 0.04,
                   ),
                   DefaultAppButton(
+                    isLoading: state is LoginLoading,
                     onPressed: () {
                       if (formKey.currentState!.validate()) {
                         log('$email and $pass');
