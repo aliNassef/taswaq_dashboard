@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taswaq_dashboard/core/utils/app_images.dart';
+import '../../../../core/utils/app_images.dart';
 import 'home_item.dart';
 
 class HomeViewBody extends StatelessWidget {

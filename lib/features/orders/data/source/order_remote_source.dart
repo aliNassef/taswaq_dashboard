@@ -1,5 +1,5 @@
-import 'package:taswaq_dashboard/core/services/database_service.dart';
-import 'package:taswaq_dashboard/features/orders/data/model/order_model.dart';
+import '../../../../core/services/database_service.dart';
+import '../model/order_model.dart';
 
 import '../../../../core/services/end_ponits.dart';
 

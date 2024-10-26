@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
-import 'package:taswaq_dashboard/features/orders/domain/entity/order_entity.dart';
-import 'package:taswaq_dashboard/features/orders/domain/repo/order_repo.dart';
+import '../../../domain/entity/order_entity.dart';
+import '../../../domain/repo/order_repo.dart';
 
 part 'order_state.dart';
 

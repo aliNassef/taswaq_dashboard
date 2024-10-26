@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:taswaq_dashboard/core/shared/widgets/app_logo.dart';
-import 'package:taswaq_dashboard/core/utils/app_colors.dart';
-import 'package:taswaq_dashboard/core/utils/app_images.dart';
-import 'package:taswaq_dashboard/core/utils/app_styles.dart';
-import 'package:taswaq_dashboard/features/fqs/presentation/view/fqs_view.dart';
-import 'package:taswaq_dashboard/features/home/presentation/view/home_view.dart';
-import 'package:taswaq_dashboard/features/layout/presentation/manger/cubit/layout_state.dart';
-import 'package:taswaq_dashboard/features/layout/presentation/widgets/admin_item.dart';
-import 'package:taswaq_dashboard/features/orders/presentation/view/order_view.dart';
-import 'package:taswaq_dashboard/features/privacy_policy/presentation/view/privacy_policy_view.dart';
-import 'package:taswaq_dashboard/features/terms_condations/presentation/view/terms_condation_view.dart';
+import '../../../../core/shared/widgets/app_logo.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_images.dart';
+import '../../../../core/utils/app_styles.dart';
+import '../../../fqs/presentation/view/fqs_view.dart';
+import '../../../home/presentation/view/home_view.dart';
+import '../manger/cubit/layout_state.dart';
+import '../widgets/admin_item.dart';
+import '../../../orders/presentation/view/order_view.dart';
+import '../../../privacy_policy/presentation/view/privacy_policy_view.dart';
+import '../../../terms_condations/presentation/view/terms_condation_view.dart';
 import '../manger/cubit/layout_cubit.dart';
 
 class LayoutView extends StatelessWidget {

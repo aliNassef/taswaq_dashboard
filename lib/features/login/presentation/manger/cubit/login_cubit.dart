@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
-import 'package:taswaq_dashboard/features/login/domain/repo/login_repo.dart';
+import '../../../domain/repo/login_repo.dart';
 
 part 'login_state.dart';
 

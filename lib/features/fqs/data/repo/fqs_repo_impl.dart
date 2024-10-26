@@ -1,5 +1,5 @@
-import 'package:taswaq_dashboard/features/fqs/data/source/fqs_remote_source.dart';
-import 'package:taswaq_dashboard/features/fqs/domain/entity/fqs_entity.dart';
+import '../source/fqs_remote_source.dart';
+import '../../domain/entity/fqs_entity.dart';
 
 import '../../../../core/errors/exceptions.dart';
 import '../../domain/repo/fqs_repo.dart';

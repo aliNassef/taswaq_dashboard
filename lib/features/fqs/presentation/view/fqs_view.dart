@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:taswaq_dashboard/features/fqs/presentation/manger/fqs_cubit/fqs_cubit.dart';
+import '../manger/fqs_cubit/fqs_cubit.dart';
 
 import '../../../../core/dI/dependency_injuction.dart';
 import '../../domain/repo/fqs_repo.dart';

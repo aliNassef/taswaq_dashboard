@@ -2,13 +2,13 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:taswaq_dashboard/core/shared/functions/toast_dialog.dart';
-import 'package:taswaq_dashboard/core/shared/widgets/custom_text_form_field.dart';
-import 'package:taswaq_dashboard/core/shared/widgets/default_app_button.dart';
-import 'package:taswaq_dashboard/core/utils/app_colors.dart';
-import 'package:taswaq_dashboard/core/utils/app_styles.dart';
-import 'package:taswaq_dashboard/features/home/presentation/view/home_view.dart';
-import 'package:taswaq_dashboard/core/shared/widgets/app_logo.dart';
+import '../../../../core/shared/functions/toast_dialog.dart';
+import '../../../../core/shared/widgets/custom_text_form_field.dart';
+import '../../../../core/shared/widgets/default_app_button.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_styles.dart';
+import '../../../home/presentation/view/home_view.dart';
+import '../../../../core/shared/widgets/app_logo.dart';
 
 import '../manger/cubit/login_cubit.dart';
 

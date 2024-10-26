@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:taswaq_dashboard/features/orders/presentation/manger/cubit/order_cubit.dart';
+import '../manger/cubit/order_cubit.dart';
 
 class OrderViewBody extends StatelessWidget {
   const OrderViewBody({super.key});

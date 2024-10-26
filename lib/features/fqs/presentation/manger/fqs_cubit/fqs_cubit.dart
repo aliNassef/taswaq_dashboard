@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
-import 'package:taswaq_dashboard/features/fqs/domain/repo/fqs_repo.dart';
+import '../../../domain/repo/fqs_repo.dart';
 
 import '../../../domain/entity/fqs_entity.dart';
 

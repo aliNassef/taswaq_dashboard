@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 
-import 'package:taswaq_dashboard/core/errors/failure.dart';
-import 'package:taswaq_dashboard/features/login/data/source/login_remote_source.dart';
+import '../../../../core/errors/failure.dart';
+import '../source/login_remote_source.dart';
 
-import 'package:taswaq_dashboard/features/login/domain/entity/user_entity.dart';
+import '../../domain/entity/user_entity.dart';
 
 import '../../domain/repo/login_repo.dart';
 

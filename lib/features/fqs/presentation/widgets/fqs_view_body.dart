@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:taswaq_dashboard/core/shared/functions/toast_dialog.dart';
-import 'package:taswaq_dashboard/core/shared/widgets/custom_text_form_field.dart';
-import 'package:taswaq_dashboard/core/shared/widgets/default_app_button.dart';
-import 'package:taswaq_dashboard/core/utils/app_colors.dart';
-import 'package:taswaq_dashboard/features/fqs/presentation/manger/fqs_cubit/fqs_cubit.dart';
+import '../../../../core/shared/functions/toast_dialog.dart';
+import '../../../../core/shared/widgets/custom_text_form_field.dart';
+import '../../../../core/shared/widgets/default_app_button.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../manger/fqs_cubit/fqs_cubit.dart';
 
 import '../../domain/entity/fqs_entity.dart';
 

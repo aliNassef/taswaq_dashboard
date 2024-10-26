@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:taswaq_dashboard/features/login/presentation/manger/cubit/login_cubit.dart';
+import '../manger/cubit/login_cubit.dart';
 import '../../../../core/dI/dependency_injuction.dart';
 import '../../domain/repo/login_repo.dart';
 import '../widgets/login_view_body.dart';

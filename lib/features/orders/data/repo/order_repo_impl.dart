@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:taswaq_dashboard/core/errors/failure.dart';
-import 'package:taswaq_dashboard/features/orders/data/source/order_remote_source.dart';
-import 'package:taswaq_dashboard/features/orders/domain/entity/order_entity.dart';
+import '../../../../core/errors/failure.dart';
+import '../source/order_remote_source.dart';
+import '../../domain/entity/order_entity.dart';
 import '../../domain/repo/order_repo.dart';
 
 class OrderRepoImpl extends OrderRepo {

@@ -1,6 +1,6 @@
-import 'package:taswaq_dashboard/core/services/database_service.dart';
-import 'package:taswaq_dashboard/core/services/end_ponits.dart';
-import 'package:taswaq_dashboard/features/fqs/domain/entity/fqs_entity.dart';
+import '../../../../core/services/database_service.dart';
+import '../../../../core/services/end_ponits.dart';
+import '../../domain/entity/fqs_entity.dart';
 
 class FqsRemoteSource {
   final DatabaseService databaseService;
