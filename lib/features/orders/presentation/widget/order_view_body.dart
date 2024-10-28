@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../manger/cubit/order_cubit.dart';
+import 'order_item.dart';
 
 class OrderViewBody extends StatelessWidget {
   const OrderViewBody({super.key});
@@ -10,14 +11,15 @@ class OrderViewBody extends StatelessWidget {
     return BlocBuilder<OrderCubit, OrderState>(
       builder: (context, state) {
         if (state is OrderSuccess) {
+          final orders = state.orders;
           return ListView.builder(
-            itemCount: state.orders.length,
+            itemCount: orders.length,
             itemBuilder: (context, index) {
-              return SizedBox(
-                height: 200,
-                width: 200,
-                child: Text('${state.orders[index].isRecived}'),
-              );
+              return orders[index].isRecived
+                  ? null
+                  : OrderItem(
+                      order: orders[index],
+                    );
             },
           );
         }
