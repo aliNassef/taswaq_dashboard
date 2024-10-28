@@ -1,8 +1,6 @@
 import 'package:dartz/dartz.dart';
-
 import 'package:taswaq_dashboard/core/errors/failure.dart';
 import 'package:taswaq_dashboard/features/home/data/source/home_remote_source.dart';
-
 import '../../domain/home_repo.dart';
 
 class HomeRepoImpl extends HomeRepo {
@@ -24,6 +22,16 @@ class HomeRepoImpl extends HomeRepo {
     try {
       final numOfProducts = await homeRemoteSource.getProducts();
       return right(numOfProducts);
+    } catch (e) {
+      return left(Failure(errMessage: e.toString()));
+    }
+  }
+
+  @override
+  Future<Either<Failure, int>> getNumOfOrders() async {
+    try {
+      final numOfOrders = await homeRemoteSource.getOrders();
+      return right(numOfOrders);
     } catch (e) {
       return left(Failure(errMessage: e.toString()));
     }

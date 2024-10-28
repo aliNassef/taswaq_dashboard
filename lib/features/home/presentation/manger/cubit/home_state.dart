@@ -32,3 +32,17 @@ final class HomeNumOfProductFailure extends HomeState {
 
   HomeNumOfProductFailure({required this.errMessage});
 }
+
+final class HomeNumOfOrdersLoading extends HomeState {}
+
+final class HomeNumOfOrdersSuccess extends HomeState {
+  final int numberOfOrders;
+
+  HomeNumOfOrdersSuccess({required this.numberOfOrders});
+}
+
+final class HomeNumOfOrderFailure extends HomeState {
+  final String errMessage;
+
+  HomeNumOfOrderFailure({required this.errMessage});
+}

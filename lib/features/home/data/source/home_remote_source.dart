@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:taswaq_dashboard/core/services/database_service.dart';
 
 import '../../../../core/services/end_ponits.dart';
+import '../../../orders/data/model/order_model.dart';
 
 class HomeRemoteSource {
   final DatabaseService databaseService;
@@ -18,11 +19,12 @@ class HomeRemoteSource {
     return response.data['total'];
   }
 
-
   Future<int> getOrders() async {
-    final response =
-        await databaseService.getDataWithoutId(path: EndPoints.orders);
-    return response.length;
+    final response = await databaseService.getSubCollectionData(
+      path: EndPoints.users,
+      subCollectionName: EndPoints.orders,
+    );
+
+    return response.map((data) => OrderModel.fromMap(data)).toList().length;
   }
-  
 }

@@ -25,4 +25,13 @@ class HomeCubit extends Cubit<HomeState> {
       (r) => emit(HomeNumOfProductSuccess(numberOfProducts: r)),
     );
   }
+
+  Future<void> getNumOfOrders() async {
+    emit(HomeNumOfOrdersLoading());
+    final result = await _homeRepo.getNumOfOrders();
+    result.fold(
+      (l) => emit(HomeNumOfOrderFailure(errMessage: l.errMessage)),
+      (r) => emit(HomeNumOfOrdersSuccess(numberOfOrders: r)),
+    );
+  }
 }
