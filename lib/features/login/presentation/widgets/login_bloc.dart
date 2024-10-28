@@ -1,15 +1,13 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:taswaq_dashboard/features/layout/presentation/view/layout_view.dart';
 import '../../../../core/shared/functions/toast_dialog.dart';
 import '../../../../core/shared/widgets/custom_text_form_field.dart';
 import '../../../../core/shared/widgets/default_app_button.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_styles.dart';
-import '../../../home/presentation/view/home_view.dart';
 import '../../../../core/shared/widgets/app_logo.dart';
-
 import '../manger/cubit/login_cubit.dart';
 
 class LoginBloc extends StatefulWidget {
@@ -31,7 +29,7 @@ class _LoginBlocState extends State<LoginBloc> {
         if (state is LoginSuccess) {
           Navigator.pushReplacementNamed(
             context,
-            HomeView.routeName,
+            LayoutView.routeName,
           );
         }
         if (state is LoginFailure) {

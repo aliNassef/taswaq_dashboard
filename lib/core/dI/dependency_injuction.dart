@@ -1,6 +1,9 @@
 import 'package:get_it/get_it.dart';
+import 'package:taswaq_dashboard/features/home/data/source/home_remote_source.dart';
+import 'package:taswaq_dashboard/features/home/domain/home_repo.dart';
 import 'package:taswaq_dashboard/features/layout/data/layout_repo_impl.dart';
 import 'package:taswaq_dashboard/features/layout/domain/repo/layout_repo.dart';
+import '../../features/home/data/repo/home_repo_impl.dart';
 import '../services/firebase_auth_service.dart';
 import '../../features/fqs/data/repo/fqs_repo_impl.dart';
 import '../../features/fqs/data/source/fqs_remote_source.dart';
@@ -15,7 +18,6 @@ import '../services/database_service.dart';
 import '../services/firestore_database.dart';
 import '../../features/privacy_policy/domain/repo/privacy_policy_repo.dart';
 import '../../features/terms_condations/data/source/terms_remote_source.dart';
-
 import '../../features/privacy_policy/data/repo/privacy_policy_repo_impl.dart';
 import '../../features/privacy_policy/data/source/privacy_remote_source.dart';
 import '../../features/terms_condations/data/repo/terms_condation_repo_impl.dart';
@@ -88,6 +90,17 @@ setUpGetIt() async {
   getIt.registerSingleton<LayoutRepo>(
     LayoutRepoImpl(
       firebaseAuthService: getIt<FirebaseAuthService>(),
+    ),
+  );
+
+  getIt.registerSingleton<HomeRemoteSource>(
+    HomeRemoteSource(
+      databaseService: getIt<DatabaseService>(),
+    ),
+  );
+  getIt.registerSingleton<HomeRepo>(
+    HomeRepoImpl(
+      homeRemoteSource: getIt<HomeRemoteSource>(),
     ),
   );
 }
